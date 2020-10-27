@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THỰC HÀNH THAO TÁC VỚI MẢNG</title>
+</head>
+
+<body>
+    <input type="text" value="" id="txtvalue" />
+    <input type="button" value="Add" id="btnadd" onclick="addElementArray()" />
+    <input type="button" value="Display" id="btndisplay" onclick="displayArray()" />
+    <p id="result"></p>
+    <script>
+        let x = 0;
+        let arrs = [];
+
+        function addElementArray() {
+            arrs[x] = document.getElementById("txtvalue").value;
+            console.log(arrs[x]);
+            alert("Element " + arrs[x] + "added at index" + x);
+            x++;
+            document.getElementById("txtvalue").innerHTML = "";
+        }
+
+        function displayArray() {
+            let e = "<hr/>";
+            for (let i = 0; i < arrs.length; i++) {
+                e += "Element " + i + " = " + arrs[i] + "<br/>";
+            }
+            document.getElementById("result").innerHTML = e;
+        }
+    </script>
+    <script></script>
+</body>
+
+</html>
