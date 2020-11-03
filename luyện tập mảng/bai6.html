@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Bài 6:</h3>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        let array = [];
+
+        function getInteger(numbers) {
+            for (let count = 1; count <= numbers; count++) {
+                let number = Math.floor(Math.random() * 10) - 4;
+                array.push(number);
+            }
+            return array;
+        }
+
+        getInteger(5);
+
+        document.getElementById("demo").innerHTML = array.toString();
+        let V;
+
+        function inputNumber(msg) {
+            do V = prompt(msg);
+            while (isNaN(V) || Number.isInteger(V));
+        }
+        inputNumber("input a integer");
+        console.log(V);
+        for (let i = 0; i < array.length; i++) {
+            if (V == array[i]) {
+                document.getElementById("demo2").innerHTML = "V is in the array";
+                break;
+            } else
+                document.getElementById("demo2").innerHTML = "V isn't in the array";
+        }
+    </script>
+</body>
+
+</html>

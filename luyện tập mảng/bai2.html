@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUYỆN TẬP MẢNG 01</title>
+</head>
+
+<body>
+    <h3>
+        Bài 2:Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.
+    </h3>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        let array = [];
+
+        function getInteger(numbers) {
+            for (let count = 1; count <= numbers; count++) {
+                let number = Math.floor(Math.random() * 20);
+                array.push(number);
+            }
+            return array;
+        }
+        getInteger(10);
+        document.getElementById("demo").innerHTML = array;
+        let max = array[0];
+        let position;
+        for (i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+                position = array.indexOf(array[i]);
+            }
+        }
+        document.getElementById("demo2").innerHTML =
+            "Giá trị lớn nhất là" + max + "ở vị trí " + position;
+    </script>
+</body>
+
+</html>

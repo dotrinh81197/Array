@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUYỆN TẬP MẢNG 01</title>
+</head>
+
+<body>
+    <h3>Bài 5: Viết chương trình đếm số nguyên âm trong một chuỗi</h3>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        let array = [];
+
+        function getInteger(numbers) {
+            for (let count = 1; count <= numbers; count++) {
+                let number = Math.floor(Math.random() * 10) - 5;
+
+                array.push(number);
+            }
+            return array;
+        }
+
+        getInteger(5);
+
+        document.getElementById("demo").innerHTML = array.toString();
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (Number.isInteger(array[i]) && array[i] < 0) {
+                count++;
+            }
+        }
+
+        document.getElementById("demo2").innerHTML =
+            "Các số nguyên âm trong một chuổi là: " + count;
+    </script>
+</body>
+
+</html>

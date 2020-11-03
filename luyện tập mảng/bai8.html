@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>
+        Bài 8 : Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
+    </h3>
+    <p id="demo"></p>
+    <input type="button" value="Sắp xếp" onclick="sort()" />
+    <p id="demo2"></p>
+    <script>
+        let array = [];
+
+        function getInteger(numbers) {
+            for (let count = 1; count <= numbers; count++) {
+                let number = Math.floor(Math.random() * 20) - 4;
+                array.push(number);
+            }
+            return array;
+        }
+
+        getInteger(10);
+
+        document.getElementById("demo").innerHTML = array.toString();
+
+        function sort() {
+            array.sort();
+            document.getElementById("demo2").innerHTML = array.toString();
+            return array;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUYỆN TẬP MẢNG 01</title>
+</head>
+
+<body>
+    <h3>
+        Bài 4: Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.
+    </h3>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        let array = [];
+        let element;
+        for (let i = 0; i < 5; i++) {
+            // do element = prompt("Enter a integer:");
+            // while (isNaN(element) || !Number.isInteger(element));
+            let element = parseInt(prompt("Enter a integer"));
+            array.push(element);
+        }
+        document.getElementById("demo").innerHTML = array;
+        document.getElementById("demo2").innerHTML = array.reverse();
+    </script>
+</body>
+
+</html>
